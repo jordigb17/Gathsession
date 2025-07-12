@@ -1,0 +1,53 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    figure{
+        margin: 0;
+    }
+    nav{
+        ul{
+            display: flex;
+            gap: 48px;
+            li{
+                list-style: none;  
+                       
+                a{
+                    &::after {
+                    content: "";
+
+                    background-color: transparent; 
+                    height: 4px;
+                    width: 50%;
+                    display: block; 
+                    margin-top: 10px;
+                    }
+
+                    @include on-event {
+                        color: white;
+                        &::after{
+                            background-color: $pink-color;
+                        }
+                    }
+                    &.active{
+                        color: white;
+                        &::after {
+                            background-color: $pink-color;
+                        }
+                    }
+                }
+            }
+
+
+
+        }
+            
+    }
+}

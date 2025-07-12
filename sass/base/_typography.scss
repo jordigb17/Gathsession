@@ -1,0 +1,33 @@
+@use '../base/fonts' as *;
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+/**
+ * Basic typography style for copy text
+ */
+
+ body{
+    font-family: "Poppins", sans-serif;
+ }
+
+ header{
+    a{
+        font-size: 18px;
+    }
+ }
+
+ main{
+   h1{
+      font-family: "Merriweather", serif;
+      font-size: 75px;
+      color: white;
+   }
+   p{
+      font-family: "Poppins", sans-serif;
+      font-size: 24px;
+      line-height: 40px;
+      color: $text-color;
+   }
+
+   
+ }
